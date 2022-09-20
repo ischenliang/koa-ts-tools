@@ -1,0 +1,3 @@
+startupTimeout: 60
+build: npm run build
+install: npm install
