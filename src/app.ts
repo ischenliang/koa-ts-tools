@@ -9,7 +9,7 @@ AV.init({
 var app = require('./server');
 
 // 监听端口
-app.listen(3002, () => {
+app.listen(80, () => {
   console.log(' DONE ', 'Compiled successfully in 10ms');
-  console.log(`访问启动成功：`, 'http://localhost:3002');
+  console.log(`访问启动成功：`, 'http://localhost:80');
 })
