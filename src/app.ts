@@ -13,7 +13,7 @@ app.use(async (ctx: Koa.DefaultContext, next) => {
     user: 'super',
     code: 200
   }
-  if(parseInt(ctx.status) === 404 ){
+  if(parseInt(ctx.status) === 404){
     ctx.body = {
       code: 404,
       message: '404 NotFound'
@@ -24,7 +24,6 @@ app.use(async (ctx: Koa.DefaultContext, next) => {
 
 // 启动路由
 ;(async () => {
-  // 在controllers中读文件涉及到异步
   await KoaControllers(app, {
     router: router, // 内部还是要使用router来实现路由绑定
     basePath: '/api', // 定义api的规则【所有接口的基础路径】
