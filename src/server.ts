@@ -1,6 +1,7 @@
 import Koa from 'koa'
 import KoaRouter from 'koa-router'
 import AV from 'leanengine'
+import loadWare from './config/middleware'
 // 解析请求体
 const app: Koa = new Koa()
 import { bootstrapControllers as KoaControllers } from 'koa-ts-controllers'
@@ -36,6 +37,7 @@ app.use(async (ctx: Koa.DefaultContext, next) => {
     // 存放所有控制器类，是数组
     controllers: [__dirname + '/controllers/**/*']
   })
+  loadWare(app)
   // 注册路由
   app.use(router.routes())
 })()

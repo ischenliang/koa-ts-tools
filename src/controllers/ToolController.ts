@@ -13,4 +13,16 @@ class ToolController {
       }
     }
   }
+  
+  @Get('/test')
+  async delete() {
+    return {
+      code: 200,
+      message: '访问成功了11',
+      data: {
+        id: 1,
+        user_name: '1111'
+      }
+    }
+  }
 }
