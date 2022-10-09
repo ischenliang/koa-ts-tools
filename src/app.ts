@@ -2,7 +2,8 @@ const AV = require('leanengine')
 AV.init({
   appId: process.env.LEANCLOUD_APP_ID || 'rzTb02G2QSk310hR5O2CTnig-gzGzoHsz',
   appKey: process.env.LEANCLOUD_APP_KEY || 'VmwFVP7TBGvzc4Dhv56LgFD1',
-  masterKey: process.env.LEANCLOUD_APP_MASTER_KEY || 'gkHsypYYsgyUqCvTt2LQhPOM'
+  masterKey: process.env.LEANCLOUD_APP_MASTER_KEY || 'gkHsypYYsgyUqCvTt2LQhPOM',
+  serverURLs: 'leancloud-api.itchenliang.club'
 });
 
 var app = require('./server');
